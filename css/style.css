@@ -1,0 +1,193 @@
+body {
+    font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    color: #587087;
+}
+
+.logo {
+    width: 120px;
+    height: 74px;
+}
+
+nav {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+code {
+    font-family: , "Courier New", monospace;
+}
+
+nav a {
+    font-weight: 550;
+    color: rgb(88, 120, 188);
+}
+
+.big_font {
+    font-size: 32px;
+}
+
+.project_img img {
+    width: 200px;
+    height: 72px;
+}
+
+.code_img img {
+    width: 100px;
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer a.m-4 {
+    color: #5878bc;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+footer img {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+}
+
+footer li {
+    display: inline;
+    list-style-type: none;
+}
+
+
+/*Wallet*/
+
+.wallet a,
+.lower_wallet a {
+    font-size: 9.6px;
+    text-decoration: none;
+    color: #1A202C;
+    font-weight: 700;
+}
+
+.wallet img,
+.lower_wallet img {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 16px;
+}
+
+.big_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 133px;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 0 16px 24px;
+    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.2), -2px -3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 119px;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 0 16px 24px;
+    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.2), -2px -3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.wallet_btn {
+    border-radius: 10px;
+    width: 70%;
+    background-color: rgb(42, 73, 141);
+    color: #fff;
+    transition: all 0.2s ease 0s;
+    font-weight: 550;
+}
+
+.wallet_btn:hover {
+    background-color: rgba(66, 153, 225, 0.6);
+    color: #fff;
+}
+
+
+/*Polkadot*/
+
+.pol_btn {
+    color: rgb(42, 73, 141);
+    width: 32%;
+    font-size: 12.8px;
+    font-weight: 600;
+    border-radius: 20px;
+    margin: 0 5px;
+    padding: 5px 0;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.active {
+    background-color: rgb(42, 73, 141);
+    color: #fff;
+}
+
+.pol_btn:hover {
+    background: rgb(238, 238, 238);
+    color: #1A202C;
+}
+
+.polkadot p {
+    color: rgb(42, 73, 141);
+    font-weight: 700;
+    font-size: 12.8px;
+}
+
+.high_input {
+    height: 100px;
+}
+
+#more {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .logo {
+        width: 70px;
+        height: 43px;
+    }
+    nav a.nav-link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    h2,
+    p.big_font {
+        font-size: 27.2px;
+    }
+    .project_img img {
+        display: block;
+        margin: auto;
+        width: 150px;
+        height: 53px;
+    }
+    footer a {
+        display: block;
+        font-size: 12px;
+    }
+    footer li {
+        display: block;
+        width: 120px;
+        margin: auto;
+        text-align: left;
+    }
+    /*wallet*/
+    .big_box {
+        width: 100px;
+        height: 119px;
+    }
+    /*polkadot*/
+    .pol_btn {
+        width: 25%;
+    }
+}

